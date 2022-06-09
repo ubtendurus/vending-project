@@ -53,7 +53,7 @@ public abstract class VendingMachineItems {
 
     @Override
     public String toString(){
-        return String.format("%s - %s - %f - %s", getSlotLocation(),getName(),getPrice(),getProductType());
+        return String.format("%s - %s - %.2f - %s", getSlotLocation(),getName(),getPrice(),getProductType());
     }
 
 }
