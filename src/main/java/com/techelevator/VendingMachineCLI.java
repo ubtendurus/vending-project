@@ -3,6 +3,7 @@ package com.techelevator;
 import com.techelevator.view.Menu;
 
 import java.math.BigDecimal;
+import java.util.Map;
 import java.util.Scanner;
 
 public class VendingMachineCLI {
@@ -21,7 +22,7 @@ public class VendingMachineCLI {
     private Menu subMenu;
     static int rndmSession = (int)(Math.random() * 100);
 
-    Money currentBalance;
+    Money customerMoney = new Money(new BigDecimal("0"),rndmSession);
 
     public VendingMachineCLI(Menu menu, Menu subMenu) {
         this.menu = menu;
@@ -30,7 +31,6 @@ public class VendingMachineCLI {
 
     public void run() {
         while (true) {
-            currentBalance = new Money(rndmSession);
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
             if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
@@ -39,8 +39,8 @@ public class VendingMachineCLI {
 
             } else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
                 // TODO - display current balance
-
-                System.out.println(currentBalance.getBalance(rndmSession));
+                //debug
+                System.out.println(customerMoney.getBalance());
 
                 // list sub menu
                 subMenu();
@@ -59,12 +59,26 @@ public class VendingMachineCLI {
         cli.run();
     }
 
-    public void feedMoney(){
+    public BigDecimal feedMoney(){
         System.out.println("How much would you like to deposit?");
         Scanner scanner = new Scanner(System.in);
         String amountToFeed = scanner.nextLine();
+        return customerMoney.setBalance(customerMoney.addBalance(amountToFeed));
        // BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
-        currentBalance.addBalance(amountToFeed, currentBalance.getUserId());
+    }
+
+    public void purchaseItems(){
+        Map<String, String> currentItems = VendingMachineItems.retrieveItems();
+        System.out.println("Which item you chose from the list?");
+        Scanner scanner = new Scanner(System.in);
+        String slotNumber = scanner.nextLine();
+        for(Map.Entry<String, String> item : currentItems.entrySet()){
+            if(item.getKey().equals(slotNumber)){
+                customerMoney.setBalance(customerMoney.spendBalance(item.getValue()));
+                System.out.println("Purchased!");
+            }
+            System.out.println("Failed!");
+        }
     }
 
     //Sub Menu Create
@@ -72,12 +86,16 @@ public class VendingMachineCLI {
         while (true) {
             String subChoice = (String) subMenu.getChoiceFromOptions(SUB_MENU_OPTIONS);
             if (subChoice.equals(SUB_MENU_OPTION_FEED_MONEY)) {
+                System.out.println("Your current balance is " + customerMoney.getBalance());
                 // add money
                 feedMoney();
-                System.out.println(currentBalance.getBalance(rndmSession));
+                //debug
+                System.out.println("Your updated balance is " + customerMoney.getBalance());
+                //System.out.println("userId " + customerMoney.getUserId() + " " + customerMoney.getBalance());
             } else if (subChoice.equals(SUB_MENU_OPTION_SELECT_PRODUCT)) {
                 // Purchase product
-                VendingMachineItems.retrieveItems();
+                purchaseItems();
+                System.out.println("Your updated balance is after purchase " + customerMoney.getBalance());
 
             } else if (subChoice.equals(SUB_MENU_OPTION_FINISH_TRANSACTION)) {
                 // Complete Transaction

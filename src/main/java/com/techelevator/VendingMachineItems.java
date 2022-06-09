@@ -115,8 +115,8 @@ public abstract class VendingMachineItems implements Purchasable {
 
     // GET THE SlotLocation and Price from CSV
 
-    public static Map<String, BigDecimal> retrieveItems() {
-        Map<String, BigDecimal> vendingItem = new HashMap<>();
+    public static Map<String, String> retrieveItems() {
+        Map<String, String> vendingItem = new HashMap<>();
 
         String pathFile = "vendingmachine.csv";
         File itemFile = new File(pathFile);
@@ -128,8 +128,8 @@ public abstract class VendingMachineItems implements Purchasable {
                 if (!currentLine.isEmpty()) {
                     String[] data = currentLine.split(Pattern.quote("|"));
                     String itemPrice = data[2];
-                    BigDecimal dbItemPrice = new BigDecimal(itemPrice);
-                    vendingItem.put(data[0], dbItemPrice);
+                    //BigDecimal dbItemPrice = new BigDecimal(itemPrice);
+                    vendingItem.put(data[0], itemPrice);
                 }
 
             }
