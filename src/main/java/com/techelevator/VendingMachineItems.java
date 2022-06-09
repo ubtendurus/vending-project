@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,6 +15,8 @@ public abstract class VendingMachineItems implements Purchasable {
     private String slotLocation;
     private String productType;
     private BigDecimal price;
+
+    private Map<String, ArrayList<Object>> vendingItem = new HashMap<>();
 
     //constructor
     public VendingMachineItems(String slotLocation, String name,
@@ -115,9 +118,7 @@ public abstract class VendingMachineItems implements Purchasable {
 
     // GET THE SlotLocation and Price from CSV
 
-    public static Map<String, String> retrieveItems() {
-        Map<String, String> vendingItem = new HashMap<>();
-
+    public Map<String, ArrayList<Object>> retrieveItems() {
         String pathFile = "vendingmachine.csv";
         File itemFile = new File(pathFile);
 
@@ -127,9 +128,16 @@ public abstract class VendingMachineItems implements Purchasable {
                 String currentLine = lineFile.nextLine();
                 if (!currentLine.isEmpty()) {
                     String[] data = currentLine.split(Pattern.quote("|"));
+                    //data[1] = name
                     String itemPrice = data[2];
+                    ArrayList<Object> arrayListData = new ArrayList<Object>();
+                    String itemName = data[1];
+                    arrayListData.add(0, itemName);
+                    arrayListData.add(1, itemPrice);
+                    //item count (stock)
+                    arrayListData.add(2, 5);
                     //BigDecimal dbItemPrice = new BigDecimal(itemPrice);
-                    vendingItem.put(data[0], itemPrice);
+                    vendingItem.put(data[0], arrayListData);
                 }
 
             }

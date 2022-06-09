@@ -3,6 +3,8 @@ package com.techelevator;
 import com.techelevator.view.Menu;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -68,16 +70,17 @@ public class VendingMachineCLI {
     }
 
     public void purchaseItems(){
-        Map<String, String> currentItems = VendingMachineItems.retrieveItems();
+        Map<String, VendingMachineItems> currentItems = ;
         System.out.println("Which item you chose from the list?");
         Scanner scanner = new Scanner(System.in);
         String slotNumber = scanner.nextLine();
-        for(Map.Entry<String, String> item : currentItems.entrySet()){
+        for(Map.Entry<String, ArrayList<Object>> item : currentItems.entrySet()){
+            List<Object> mapValues = item.getValue();
             if(item.getKey().equals(slotNumber)){
-                customerMoney.setBalance(customerMoney.spendBalance(item.getValue()));
+                customerMoney.setBalance(customerMoney.spendBalance());
                 System.out.println("Purchased!");
+                break;
             }
-            System.out.println("Failed!");
         }
     }
 
