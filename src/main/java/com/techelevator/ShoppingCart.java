@@ -2,7 +2,7 @@ package com.techelevator;
 
 import java.math.BigDecimal;
 
-public class ShoppingCart implements PurchaseItem{
+public class ShoppingCart implements Purchasable{
     private String slotLocation;
     private String name;
     private BigDecimal price;
@@ -30,6 +30,11 @@ public class ShoppingCart implements PurchaseItem{
     @Override
     public String getName() {
         return name;
+    }
+
+
+    public BigDecimal getMoney(){
+        return price;
     }
 
     @Override

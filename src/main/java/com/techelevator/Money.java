@@ -4,15 +4,23 @@ import java.math.BigDecimal;
 
 public class Money {
     private BigDecimal balance;
+    private int userId;
     public Money(BigDecimal balance){
         this.balance = balance;
     }
 
-    public Money(){
+    public Money(int userId){
         this.balance = new BigDecimal("0");
+        this.userId = userId;
     }
 
-    public BigDecimal getBalance() {
+    public int getUserId(){
+        return userId;
+    }
+    public void setUserId(){
+        this.userId = userId;
+    }
+    public BigDecimal getBalance(int userId) {
         return balance;
     }
 
@@ -20,7 +28,7 @@ public class Money {
         this.balance = balance;
     }
 
-    public BigDecimal addBalance(String dollarAmount){
+    public BigDecimal addBalance(String dollarAmount, int userId){
         return balance.add(new BigDecimal(dollarAmount));
     }
 

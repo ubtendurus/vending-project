@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public abstract class VendingMachineItems implements PurchaseItem {
+public abstract class VendingMachineItems implements Purchasable {
     //properties
     private String name;
     //private int count;

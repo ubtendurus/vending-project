@@ -3,6 +3,9 @@ package com.techelevator;
 import java.math.BigDecimal;
 
 public interface Purchasable {
-    BigDecimal getMoney();
+    String getSlotLocation();
+    BigDecimal getPrice();
+    String getName();
+    String getProductType();
 
 }
