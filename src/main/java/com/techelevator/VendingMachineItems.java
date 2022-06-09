@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public abstract class VendingMachineItems {
     //properties
     private String name;
-    private int count;
+    //private int count;
     private String slotLocation;
     private String productType;
     private BigDecimal price;
@@ -20,12 +20,12 @@ public abstract class VendingMachineItems {
     public void setName(){
         this.name = name;
     }
-    public int getCount(){
+    /*public int getCount(){
         return count;
-    }
-    public void setCount(){
-        this.count = count;
-    }
+    }*/
+//    public void setCount(){
+//        this.count = count;
+//    }
     public String getSlotLocation(){
         return slotLocation;
     }
@@ -41,10 +41,15 @@ public abstract class VendingMachineItems {
     public BigDecimal getPrice(){
         return price;
     }
-    public void setPrice(){
+    /*public void setPrice(){
         this.price = price;
-    }
+    }*/
     //abstract dispensing message
     public abstract void dispensingMessage();
+
+    @Override
+    public String toString(){
+        return String.format("Item - %s - %s - %f - %s", getSlotLocation(),getName(),getPrice(),getProductType());
+    }
 
 }
