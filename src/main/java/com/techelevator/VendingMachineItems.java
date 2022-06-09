@@ -12,6 +12,10 @@ public abstract class VendingMachineItems {
     //constructor
     public VendingMachineItems(String slotLocation, String name,
                                BigDecimal price, String productType){
+        this.slotLocation = slotLocation;
+        this.name = name;
+        this.price = price;
+        this.productType = productType;
     }
     //getters and setters
     public String getName(){
@@ -49,7 +53,7 @@ public abstract class VendingMachineItems {
 
     @Override
     public String toString(){
-        return String.format("Item - %s - %s - %f - %s", getSlotLocation(),getName(),getPrice(),getProductType());
+        return String.format("%s - %s - %f - %s", getSlotLocation(),getName(),getPrice(),getProductType());
     }
 
 }

@@ -40,7 +40,7 @@ public class VendingMachineCLI {
 
 
     public static void displayItems() {
-        String pathFile = "C:\\Users\\utend\\workspace\\nlr-8-module-1-capstone-orange-team-10\\vendingmachine.csv";
+        String pathFile = "vendingmachine.csv";
         File itemFile = new File(pathFile);
 
         try (Scanner lineFile = new Scanner(itemFile)) {
