@@ -32,7 +32,7 @@ public class MoneyTests {
     @Test
     public void test_set_balance(){
         BigDecimal expectedResult = new BigDecimal("40");
-        BigDecimal result = testMoney.setBalance(testMoney.getBalance().add(new BigDecimal("10")));
+        BigDecimal result = testMoney.setBalance(new BigDecimal("40"));
 
         //Assert
         Assert.assertEquals("Set balance doesn't add up the value",expectedResult,result);

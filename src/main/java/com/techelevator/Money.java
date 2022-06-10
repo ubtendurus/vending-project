@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.math.BigDecimal;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -60,16 +61,15 @@ public class Money {
 
     public void purchaseItem(Map<String, VendingMachineItem> masterMap, Money customerMoney){
         System.out.println("Please enter the slot number here:");
-        //Scanner scanner = new Scanner(System.in);
         String slotNumber = scanner.nextLine();
         for(Map.Entry<String, VendingMachineItem> item : masterMap.entrySet()){
-            if(item.getKey().equals(slotNumber)){
-                if(Stock.checkStock(masterMap, slotNumber)){
+            if(item.getKey().equals(slotNumber.toUpperCase())){
+                if(Stock.checkStock(masterMap, slotNumber.toUpperCase())){
                     if(item.getValue().getPrice().compareTo(customerMoney.getBalance()) == 1) {
                         System.out.println("You do not have enough funds");
                         break;
                     }
-                    Stock.reduceStock(masterMap, slotNumber);
+                    Stock.reduceStock(masterMap, slotNumber.toUpperCase());
                     logFile.updateSalesReport(item.getValue().getName());
                     item.getValue().dispenseMessage();
                 }else{

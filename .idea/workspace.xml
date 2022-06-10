@@ -45,11 +45,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/utend/workspace/ugur-tendurus-student-code/Side_Projects/Capstone-Draft"
-  }
-}]]></component>
   <component name="RunManager" selected="Application.VendingMachineCLI">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineCLI" />
@@ -97,8 +92,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.VendingMachineCLI" />
-        <item itemvalue="JUnit.VendingMachineItemTests" />
         <item itemvalue="JUnit.MoneyTests" />
+        <item itemvalue="JUnit.VendingMachineItemTests" />
       </list>
     </recent_temporary>
   </component>

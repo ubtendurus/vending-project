@@ -42,8 +42,9 @@ public class Menu {
 	}
 
 	private void displayMenuOptions(Object[] options) {
+		int numberOfOptionsShown = 3;
 		out.println();
-		for (int i = 0; i < options.length; i++) {
+		for (int i = 0; i < numberOfOptionsShown; i++) {
 			int optionNum = i + 1;
 			out.println(optionNum + ") " + options[i]);
 		}

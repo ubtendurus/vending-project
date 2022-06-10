@@ -46,7 +46,6 @@ public class VendingMachineCLI {
                 subMenu(masterMap, customerMoney);
             }
             else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
-                //TODO - learn about this
                 System.exit(0);
             } else if (choice.equals(MAIN_MENU_CREATE_SALES_REPORT)) {
                 sr.createSalesReport(masterMap);
