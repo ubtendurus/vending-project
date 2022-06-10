@@ -21,7 +21,7 @@ public class VendingMachineCLI {
     private Menu subMenu;
     static int rndmSession = (int)(Math.random() * 100);
 
-    Money customerMoney = new Money(new BigDecimal("0"),rndmSession);
+    Money customerMoney = new Money(new BigDecimal("0"), rndmSession);
 
     //call within main method
     public VendingMachineCLI(Menu menu, Menu subMenu) {
@@ -45,7 +45,7 @@ public class VendingMachineCLI {
             }
             else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
                 //TODO - learn about this
-                System.exit(1);
+                System.exit(0);
             }
         }
     }

@@ -1,12 +1,11 @@
 package com.techelevator;
 
-import java.io.File;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.regex.Pattern;
+
 
 public class VendingMachineItem implements Purchasable {
     //properties
@@ -72,16 +71,5 @@ public class VendingMachineItem implements Purchasable {
     public BigDecimal getPrice() {
         return price;
     }
-
-    //abstract dispensing message NOT NEEDED BECAUSE WOULD BE CALLED IN MFS
-   // public abstract void dispensingMessage();
-
-//    @Override
-//    public String toString() {
-//        return String.format("%s - %s - %.2f - %s", getSlotLocation(), getName(), getPrice(), getProductType());
-//    }
-
-
-
 
 }

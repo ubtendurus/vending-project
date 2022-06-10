@@ -33,13 +33,13 @@ public class Money {
         return balance;
     }
 
-    public BigDecimal addBalance(String dollarAmount){
-        return balance.add(new BigDecimal(dollarAmount));
-    }
-
-    public BigDecimal spendBalance(BigDecimal spendAmount){
-        return balance.subtract(spendAmount);
-    }
+//    public BigDecimal addBalance(String dollarAmount){
+//        return balance.add(new BigDecimal(dollarAmount));
+//    }
+//
+//    public BigDecimal spendBalance(BigDecimal spendAmount){
+//        return balance.subtract(spendAmount);
+//    }
 
     public void feedMoney(Money customerMoney){
         System.out.println("How much would you like to deposit?");
@@ -64,7 +64,7 @@ public class Money {
                 }else{
                     System.out.println("Out of stock, sorry!");
                 }
-                customerMoney.spendBalance(item.getValue().getPrice());
+                customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
                 System.out.println("Purchased!");
                 break;
             }
