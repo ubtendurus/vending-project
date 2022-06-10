@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -43,6 +45,7 @@ public class MachineFileSystem {
 
 
     public void transactionLog(String activity, BigDecimal money, BigDecimal updatedMoney){
+        System.setProperty("java.util.logging.SimpleFormatter.format","%1$tF %1$tT %1$Tp %5$s %n");
         Logger logger = Logger.getLogger("Log");
         FileHandler fileHandler;
         try{
