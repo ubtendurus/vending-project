@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Menu Items are updated/Money Class">
+    <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Unit Tests/Negative money Feed">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/MachineFileSystemTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/MoneyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techelevator/MoneyTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/StockTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineCLITests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineItemTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techelevator/VendingMachineCLI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techelevator/VendingMachineCLI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techelevator/view/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techelevator/view/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/techelevator/view/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/techelevator/view/MenuTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +45,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/utend/workspace/nlr-8-module-1-capstone-orange-team-10&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/utend/workspace/ugur-tendurus-student-code/Side_Projects/Capstone-Draft"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.VendingMachineCLI">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineCLI" />
@@ -150,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654793229259</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Unit Tests/Negative money Feed">
+      <created>1654880203090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654880203090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Unit Tests/Negative money Feed">
+      <created>1654880313666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654880313666</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +172,7 @@
     <MESSAGE value="Listing the Items (err fixed)" />
     <MESSAGE value="Listing the Items (err fixed1)" />
     <MESSAGE value="Menu Items are updated/Money Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu Items are updated/Money Class" />
+    <MESSAGE value="Unit Tests/Negative money Feed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit Tests/Negative money Feed" />
   </component>
 </project>

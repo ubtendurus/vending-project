@@ -70,6 +70,7 @@ public class Money {
                         break;
                     }
                     Stock.reduceStock(masterMap, slotNumber);
+                    logFile.updateSalesReport(item.getValue().getName());
                     item.getValue().dispenseMessage();
                 }else{
                     System.out.println("Out of stock, sorry!");

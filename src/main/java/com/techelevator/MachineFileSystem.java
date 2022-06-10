@@ -3,6 +3,7 @@ package com.techelevator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,9 +19,13 @@ public class MachineFileSystem {
     String pathFile = "vendingmachine.csv";
     File itemFile = new File(pathFile);
 
+    String saleFilePath = "src\\main\\java\\com\\techelevator\\salesReport.txt";
+    File saleFile = new File(saleFilePath);
+
     public Map<String, VendingMachineItem> startUp() {
         Map<String, VendingMachineItem> initialMap = new TreeMap<>();
-        try (Scanner lineFile = new Scanner(itemFile)) {
+        try (Scanner lineFile = new Scanner(itemFile);
+             PrintWriter saleWriter = new PrintWriter(saleFile)) {
             while (lineFile.hasNextLine()) {
                 String currentLine = lineFile.nextLine();
                 if (!currentLine.isEmpty()) {
@@ -30,7 +35,11 @@ public class MachineFileSystem {
                     String itemPrice = data[2];
                     String itemType = data[3];
                     BigDecimal dbItemPrice = new BigDecimal(itemPrice);
-                //cut off here
+
+                    //Generate default sale report - 0 amount
+                    saleWriter.println(itemName + "|" + 0);
+
+                    //cut off here
                     VendingMachineItem item = new VendingMachineItem(itemName, dbItemPrice, itemType);
                     initialMap.put(slotLocation, item);
                 }
@@ -57,6 +66,25 @@ public class MachineFileSystem {
             logger.info(activity + " : $" + money + " $" + updatedMoney);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void updateSalesReport(String nameItem) {
+        try (Scanner saleRead = new Scanner(saleFile);
+             PrintWriter saleWrite = new PrintWriter(saleFile)) {
+            while (saleRead.hasNextLine()) {
+                String currentLine = saleRead.nextLine();
+                if (currentLine.contains(nameItem)) {
+                    String[] data = currentLine.split(Pattern.quote("|"));
+                    String itemName = data[0];
+                    String strItemCount = data[1];
+                    int itemCount = Integer.parseInt(strItemCount);
+                    itemCount += 1;
+                    saleWrite.println(currentLine.replace(strItemCount,Integer.toString(itemCount)));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
         }
     }
 }
