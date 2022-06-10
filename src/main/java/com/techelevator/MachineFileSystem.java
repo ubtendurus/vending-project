@@ -36,11 +36,9 @@ public class MachineFileSystem {
         }
         return initialMap;
     }
-<<<<<<< HEAD
+
 
     public void transactionLog(String activity, Money customerMoney){
 
     }
-=======
->>>>>>> 019349ef39995223f081188e83ceb88a1302f80c
 }

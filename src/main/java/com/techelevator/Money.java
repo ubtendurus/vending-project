@@ -18,7 +18,7 @@ public class Money {
         this.balance = new BigDecimal("0");
     }
 
-//    public int getUserId(){
+    //    public int getUserId(){
 //        return userId;
 //    }
 //    public void setUserId(int userId){
@@ -40,14 +40,13 @@ public class Money {
 //    public BigDecimal spendBalance(BigDecimal spendAmount){
 //        return balance.subtract(spendAmount);
 //    }
-<<<<<<< HEAD
 
     //scans inputs for all methods
     Scanner scanner = new Scanner(System.in);
 
     public void feedMoney(Money customerMoney){
         System.out.println("How much would you like to deposit?");
-       // Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         String amountToFeed = scanner.nextLine();
         BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
         customerMoney.setBalance(customerMoney.getBalance().add(bdAmountToFeed));
@@ -70,7 +69,7 @@ public class Money {
                     System.out.println("Out of stock, sorry!");
                 }
                 customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
-               // System.out.println("Purchased!");
+                // System.out.println("Purchased!");
                 break;
             }
         }
@@ -88,38 +87,6 @@ public class Money {
             System.out.println("Okay, taking you back to Main Menu");
         } else {
             System.out.println("Please provide a valid response");
-=======
-
-    public void feedMoney(Money customerMoney){
-        System.out.println("How much would you like to deposit?");
-        Scanner scanner = new Scanner(System.in);
-        String amountToFeed = scanner.nextLine();
-        BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
-        customerMoney.setBalance(customerMoney.getBalance().add(bdAmountToFeed));
-    }
-
-    public void purchaseItem(Map<String, VendingMachineItem> masterMap, Money customerMoney){
-        System.out.println("Please enter the slot number here:");
-        Scanner scanner = new Scanner(System.in);
-        String slotNumber = scanner.nextLine();
-        for(Map.Entry<String, VendingMachineItem> item : masterMap.entrySet()){
-            if(item.getKey().equals(slotNumber)){
-                if(Stock.checkStock(masterMap, slotNumber)){
-                    if(item.getValue().getPrice().compareTo(customerMoney.getBalance()) == 1) {
-                        System.out.println("You do not have enough funds");
-                        break;
-                    }
-                   Stock.reduceStock(masterMap, slotNumber);
-                }else{
-                    System.out.println("Out of stock, sorry!");
-                }
-                customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
-                System.out.println("Purchased!");
-                break;
-            }
->>>>>>> 019349ef39995223f081188e83ceb88a1302f80c
         }
     }
 }
-
-
