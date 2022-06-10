@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class StockTests {
     //act
     @Test
     public void test_display_items(Map<String, VendingMachineItem> testMap){
-        //testStock.
+
     }
     //assert
 }
