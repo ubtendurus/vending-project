@@ -50,8 +50,12 @@ public class Money {
         // Scanner scanner = new Scanner(System.in);
         String amountToFeed = scanner.nextLine();
         BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
-        customerMoney.setBalance(customerMoney.getBalance().add(bdAmountToFeed));
-        logFile.transactionLog("Feed Money",bdAmountToFeed,customerMoney.getBalance());
+        if(amountToFeed.contains("-")){
+            logFile.transactionLog("Feed Money Failed",bdAmountToFeed,customerMoney.getBalance());
+        }else{
+            customerMoney.setBalance(customerMoney.getBalance().add(bdAmountToFeed));
+            logFile.transactionLog("Feed Money",bdAmountToFeed,customerMoney.getBalance());
+        }
     }
 
     public void purchaseItem(Map<String, VendingMachineItem> masterMap, Money customerMoney){

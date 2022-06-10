@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Menu Items are updated/Money Class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/MachineFileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/MachineFileSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/MachineFileSystemTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/MoneyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techelevator/MoneyTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/StockTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineCLITests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techelevator/VendingMachineItemTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/techelevator/VendingMachineCLI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techelevator/VendingMachineCLI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techelevator/view/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techelevator/view/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/techelevator/view/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/techelevator/view/MenuTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +56,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/utend/workspace/nlr-8-module-1-capstone-orange-team-10"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/utend/workspace/nlr-8-module-1-capstone-orange-team-10&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.VendingMachineCLI">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineCLI" />
       <module name="m1-java-capstone-vending-machine" />
@@ -68,9 +75,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MoneyTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m1-java-capstone-vending-machine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techelevator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techelevator" />
+      <option name="MAIN_CLASS_NAME" value="com.techelevator.MoneyTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendingMachineItemTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="m1-java-capstone-vending-machine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techelevator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techelevator" />
+      <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineItemTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.VendingMachineCLI" />
+        <item itemvalue="JUnit.VendingMachineItemTests" />
+        <item itemvalue="JUnit.MoneyTests" />
       </list>
     </recent_temporary>
   </component>
