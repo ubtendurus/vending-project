@@ -3,10 +3,7 @@ package com.techelevator;
 import com.techelevator.view.Menu;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class VendingMachineCLI {
     //TODO - add an exit option (and sales report option *OPTIONAL*)
@@ -26,29 +23,28 @@ public class VendingMachineCLI {
 
     Money customerMoney = new Money(new BigDecimal("0"),rndmSession);
 
+    //call within main method
     public VendingMachineCLI(Menu menu, Menu subMenu) {
         this.menu = menu;
         this.subMenu = subMenu;
     }
 
     public void run() {
+        MachineFileSystem mfs = new MachineFileSystem();
+        Map<String, VendingMachineItem> masterMap = mfs.startUp();
         while (true) {
             String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
             if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
-                //PurchaseItem.retrieveItems();
-		        VendingMachineItems.displayItems();
+		        Stock.displayItems(masterMap);
 
             } else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
-                // TODO - display current balance
-                //debug
-                System.out.println(customerMoney.getBalance());
-
+                System.out.println("You currently have $" + customerMoney.getBalance());
                 // list sub menu
-                subMenu();
-                // do purchase
+                subMenu(masterMap, customerMoney);
             }
             else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
+                //TODO - learn about this
                 System.exit(1);
             }
         }
@@ -61,44 +57,21 @@ public class VendingMachineCLI {
         cli.run();
     }
 
-    public BigDecimal feedMoney(){
-        System.out.println("How much would you like to deposit?");
-        Scanner scanner = new Scanner(System.in);
-        String amountToFeed = scanner.nextLine();
-        return customerMoney.setBalance(customerMoney.addBalance(amountToFeed));
-       // BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
-    }
-
-    public void purchaseItems(){
-        Map<String, VendingMachineItems> currentItems = ;
-        System.out.println("Which item you chose from the list?");
-        Scanner scanner = new Scanner(System.in);
-        String slotNumber = scanner.nextLine();
-        for(Map.Entry<String, ArrayList<Object>> item : currentItems.entrySet()){
-            List<Object> mapValues = item.getValue();
-            if(item.getKey().equals(slotNumber)){
-                customerMoney.setBalance(customerMoney.spendBalance());
-                System.out.println("Purchased!");
-                break;
-            }
-        }
-    }
-
     //Sub Menu Create
-    public void subMenu() {
+    public void subMenu(Map<String, VendingMachineItem> masterMap, Money customerMoney) {
         while (true) {
             String subChoice = (String) subMenu.getChoiceFromOptions(SUB_MENU_OPTIONS);
             if (subChoice.equals(SUB_MENU_OPTION_FEED_MONEY)) {
-                System.out.println("Your current balance is " + customerMoney.getBalance());
+                System.out.println("Your current balance is $" + customerMoney.getBalance());
                 // add money
-                feedMoney();
+                customerMoney.feedMoney(customerMoney);
                 //debug
-                System.out.println("Your updated balance is " + customerMoney.getBalance());
-                //System.out.println("userId " + customerMoney.getUserId() + " " + customerMoney.getBalance());
+                System.out.println("Your updated balance is $" + customerMoney.getBalance());
+
             } else if (subChoice.equals(SUB_MENU_OPTION_SELECT_PRODUCT)) {
                 // Purchase product
-                purchaseItems();
-                System.out.println("Your updated balance is after purchase " + customerMoney.getBalance());
+                customerMoney.purchaseItem(masterMap, customerMoney);
+                System.out.println("Your updated balance after purchase is $" + customerMoney.getBalance());
 
             } else if (subChoice.equals(SUB_MENU_OPTION_FINISH_TRANSACTION)) {
                 // Complete Transaction
