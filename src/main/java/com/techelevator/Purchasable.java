@@ -7,5 +7,6 @@ public interface Purchasable {
     BigDecimal getPrice();
     String getName();
     String getProductType();
+    void dispenseMessage();
 
 }
