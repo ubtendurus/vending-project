@@ -81,7 +81,4 @@ public class VendingMachineCLI {
         }
     }
 
-
-    // TODO - LOG WILL BE CREATED HERE
-
 }
