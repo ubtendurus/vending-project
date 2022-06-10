@@ -7,7 +7,11 @@ public class Stock {
     public static void displayItems(Map<String, VendingMachineItem> productMap) {
         for(Map.Entry<String, VendingMachineItem> entry : productMap.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue().getName() + " " +
+<<<<<<< HEAD
                     entry.getValue().getPrice() + " Stock left: " + entry.getValue().getCount());
+=======
+                    entry.getValue().getPrice());
+>>>>>>> 019349ef39995223f081188e83ceb88a1302f80c
         }
     }
     public static boolean checkStock(Map<String, VendingMachineItem> masterMap, String itemSelection){

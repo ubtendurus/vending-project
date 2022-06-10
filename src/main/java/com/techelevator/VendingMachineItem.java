@@ -16,7 +16,7 @@ public class VendingMachineItem implements Purchasable {
     private int count = INITIAL_PRODUCT_QUANTITY;
     private static final int INITIAL_PRODUCT_QUANTITY = 5;
 
- //   private Map<String, VendingMachineItem> vendingItem = new HashMap<>();
+    private Map<String, VendingMachineItem> vendingItem = new HashMap<>();
 
     //constructor
     public VendingMachineItem(String slotLocation, String name,
@@ -36,13 +36,16 @@ public class VendingMachineItem implements Purchasable {
     public VendingMachineItem(){
 
     }
+
     //getters and setters
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getCount(){
         return count;
     }
@@ -52,27 +55,21 @@ public class VendingMachineItem implements Purchasable {
     public String getSlotLocation() {
         return slotLocation;
     }
+
     public void setSlotLocation(String slotLocation) {
         this.slotLocation = slotLocation;
     }
+
     public String getProductType() {
         return productType;
     }
+
     public void setProductType(String productType) {
         this.productType = productType;
     }
+
     public BigDecimal getPrice() {
         return price;
     }
-    public void dispenseMessage(){
-        if(productType.equals("Chip")){
-            System.out.println("Crunch Crunch, Yum!");
-        } else if(productType.equals("Candy")){
-            System.out.println("Munch Munch, Yum!");
-        }else if(productType.equals("Gum")){
-            System.out.println("Chew Chew, Yum!");
-        }else if(productType.equals("Drink")){
-            System.out.println("Glug Glug, Yum!");
-        }
-    }
+
 }

@@ -52,9 +52,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration name="com.techelevator.VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineCLI" />
-      <module name="m1-java-capstone-vending-machine" />
+      <module name="nlr-8-module-1-capstone-orange-team-10" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.techelevator.*" />
@@ -67,7 +67,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.techelevator.VendingMachineCLI" />
+        <item itemvalue="Application.VendingMachineCLI" />
       </list>
     </recent_temporary>
   </component>
@@ -128,16 +128,5 @@
     <MESSAGE value="Listing the Items (err fixed1)" />
     <MESSAGE value="Menu Items are updated/Money Class" />
     <option name="LAST_COMMIT_MESSAGE" value="Menu Items are updated/Money Class" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/techelevator/VendingMachineCLI.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
