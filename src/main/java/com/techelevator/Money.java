@@ -43,6 +43,7 @@ public class Money {
 
     //scans inputs for all methods
     Scanner scanner = new Scanner(System.in);
+    MachineFileSystem logFile = new MachineFileSystem();
 
     public void feedMoney(Money customerMoney){
         System.out.println("How much would you like to deposit?");
@@ -50,6 +51,7 @@ public class Money {
         String amountToFeed = scanner.nextLine();
         BigDecimal bdAmountToFeed = new BigDecimal(amountToFeed);
         customerMoney.setBalance(customerMoney.getBalance().add(bdAmountToFeed));
+        logFile.transactionLog("Feed Money",bdAmountToFeed,customerMoney.getBalance());
     }
 
     public void purchaseItem(Map<String, VendingMachineItem> masterMap, Money customerMoney){
@@ -69,6 +71,7 @@ public class Money {
                     System.out.println("Out of stock, sorry!");
                 }
                 customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
+                logFile.transactionLog(item.getValue().getName(),item.getValue().getPrice(),customerMoney.getBalance());
                 // System.out.println("Purchased!");
                 break;
             }
@@ -83,6 +86,7 @@ public class Money {
             System.out.println("Thank you for shopping with us! Your remaining balance to be refunded is $" +
                     balanceBeforeFinishing);
             customerMoney.setBalance(new BigDecimal("0"));
+            logFile.transactionLog("Withdrawal",balanceBeforeFinishing,customerMoney.getBalance());
         } else if(userInput.substring(0, 1).equalsIgnoreCase("N")) {
             System.out.println("Okay, taking you back to Main Menu");
         } else {

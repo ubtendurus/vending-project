@@ -2,10 +2,14 @@ package com.techelevator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import java.util.regex.Pattern;
 
 public class MachineFileSystem {
@@ -38,7 +42,18 @@ public class MachineFileSystem {
     }
 
 
-    public void transactionLog(String activity, Money customerMoney){
-
+    public void transactionLog(String activity, BigDecimal money, BigDecimal updatedMoney){
+        Logger logger = Logger.getLogger("Log");
+        FileHandler fileHandler;
+        try{
+            fileHandler = new FileHandler("src/main/java/com/techelevator/capstoneLog.txt");
+            logger.setUseParentHandlers(false);
+            logger.addHandler(fileHandler);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fileHandler.setFormatter(formatter);
+            logger.info(activity + " : $" + money + " $" + updatedMoney);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
