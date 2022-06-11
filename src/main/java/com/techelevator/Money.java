@@ -1,7 +1,6 @@
 package com.techelevator;
 
 import java.math.BigDecimal;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -64,7 +63,7 @@ public class Money {
         String slotNumber = scanner.nextLine();
         for(Map.Entry<String, VendingMachineItem> item : masterMap.entrySet()){
             if(item.getKey().equals(slotNumber.toUpperCase())){
-                if(Stock.checkStock(masterMap, slotNumber.toUpperCase())){
+                if(Stock.hasEnoughStock(masterMap, slotNumber.toUpperCase())){
                     if(item.getValue().getPrice().compareTo(customerMoney.getBalance()) == 1) {
                         System.out.println("You do not have enough funds");
                         break;

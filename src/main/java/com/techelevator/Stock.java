@@ -10,7 +10,7 @@ public class Stock {
                     entry.getValue().getPrice() + " Stock left: " + entry.getValue().getCount());
         }
     }
-    public static boolean checkStock(Map<String, VendingMachineItem> masterMap, String itemSelection){
+    public static boolean hasEnoughStock(Map<String, VendingMachineItem> masterMap, String itemSelection){
         if(masterMap.get(itemSelection).getCount() >= 1){
             return true;
         }
