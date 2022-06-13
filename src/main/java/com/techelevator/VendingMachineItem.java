@@ -16,8 +16,6 @@ public class VendingMachineItem implements Purchasable {
     private int count = INITIAL_PRODUCT_QUANTITY;
     private static final int INITIAL_PRODUCT_QUANTITY = 5;
 
-    //   private Map<String, VendingMachineItem> vendingItem = new HashMap<>();
-
     //constructor
     public VendingMachineItem(String slotLocation, String name,
                               BigDecimal price, String productType) {

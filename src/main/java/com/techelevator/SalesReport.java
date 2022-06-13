@@ -26,8 +26,6 @@ public class SalesReport {
                         String sProductSold = Integer.toString(productSold);
                         totalSales = totalSales.add(productPrice.multiply(new BigDecimal(sProductSold)));
                     }
-//            try(PrintWriter writeSalesReport = new PrintWriter(salesReport)){
-//                if(salesReport.exists()){
                     writeSalesReport.println(productName + "|" + productSold);
                 }
                 writeSalesReport.println("Total sales: " + totalSales);
@@ -39,8 +37,6 @@ public class SalesReport {
             }
         }
     }
-
-    //getSalesReport method
 
 
 
