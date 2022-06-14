@@ -7,6 +7,12 @@
     <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Unit Tests/Negative money Feed">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/salesReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/salesReport.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +51,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../megan-clark-student-code/module-2/01_Intro_to_Databases/exercise" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/utend/workspace/nlr-8-module-1-capstone-orange-team-10"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.VendingMachineCLI">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.techelevator.VendingMachineCLI" />
@@ -172,16 +180,5 @@
     <MESSAGE value="Menu Items are updated/Money Class" />
     <MESSAGE value="Unit Tests/Negative money Feed" />
     <option name="LAST_COMMIT_MESSAGE" value="Unit Tests/Negative money Feed" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/techelevator/Money.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

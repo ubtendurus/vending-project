@@ -41,7 +41,7 @@ public class Money {
             numberOfNickels = numberOfNickels.add(new BigDecimal("1"));
             customerMoney.setBalance(customerMoney.getBalance().subtract(nickel));
         }
-        while(customerMoney.getBalance().compareTo(penny) > 0){
+        while(customerMoney.getBalance().compareTo(penny) >= 0){
             numberOfPennies = numberOfPennies.add(new BigDecimal("1"));
             customerMoney.setBalance(customerMoney.getBalance().subtract(penny));
         }
