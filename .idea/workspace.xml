@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Unit Tests/Negative money Feed">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="55a75106-0271-47ac-8625-ca2306f4e8de" name="Changes" comment="Fix for penny">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/VendingMachineCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/VendingMachineCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.1.lck" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/capstoneLog.txt.3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techelevator/salesReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techelevator/salesReport.txt" afterDir="false" />
@@ -103,8 +104,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.VendingMachineCLI" />
-        <item itemvalue="JUnit.MoneyTests" />
         <item itemvalue="JUnit.VendingMachineItemTests" />
+        <item itemvalue="JUnit.MoneyTests" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654880313666</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix for penny">
+      <created>1655226245320</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655226245320</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +187,7 @@
     <MESSAGE value="Listing the Items (err fixed1)" />
     <MESSAGE value="Menu Items are updated/Money Class" />
     <MESSAGE value="Unit Tests/Negative money Feed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit Tests/Negative money Feed" />
+    <MESSAGE value="Fix for penny" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for penny" />
   </component>
 </project>

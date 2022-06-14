@@ -67,7 +67,13 @@ public class VendingMachineCLI {
             if (subChoice.equals(SUB_MENU_OPTION_FEED_MONEY)) {
                 System.out.println("Your current balance is $" + customerMoney.getBalance());
                 // add money
-                customerMoney.feedMoney(customerMoney);
+                try {
+                    // try MoneyFeed
+                    customerMoney.feedMoney(customerMoney);
+                }catch(Exception e) { // catch the exception and print the error message
+                    System.err.println("Insert Money!");
+                }
+
                 //debug
                 System.out.println("Your updated balance is $" + customerMoney.getBalance());
 

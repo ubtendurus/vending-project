@@ -109,10 +109,10 @@ public class Money {
                     Stock.reduceStock(masterMap, slotNumber.toUpperCase());
                     logFile.updateSalesReport(item.getValue().getName());
                     item.getValue().dispenseMessage();
+                    customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
                 }else{
                     System.out.println("Out of stock, sorry!");
                 }
-                customerMoney.setBalance(customerMoney.getBalance().subtract(item.getValue().getPrice()));
                 logFile.transactionLog(item.getValue().getName(),item.getValue().getPrice(),customerMoney.getBalance());
                 break;
             }
